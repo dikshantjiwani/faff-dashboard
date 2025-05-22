@@ -40,7 +40,7 @@ function App() {
         </div>
       ) : (
         <div>
-          <h2 className="text-xl font-semibold mb-3">👋 Hello, {name}</h2>
+          <h2 className="text-xl font-semibold mb-3"> Hello, {name}</h2>
           {tasks.length === 0 ? (
             <p>No tasks assigned to you!</p>
           ) : (
