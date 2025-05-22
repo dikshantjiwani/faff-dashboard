@@ -17,6 +17,12 @@ function App() {
     }
   };
 
+  const logout = () => {
+    setName('');
+    setTasks([]);
+    setLoggedIn(false);
+  };
+
   const handleUpdate = async (id, updates) => {
     await updateTask(id, updates);
     const data = await fetchTasksForAssignee(name);
@@ -40,7 +46,10 @@ function App() {
         </div>
       ) : (
         <div>
-          <h2 className="text-xl font-semibold mb-3"> Hello, {name}</h2>
+          <div className="flex justify-between items-center mb-3">
+            <h2 className="text-xl font-semibold"> Hello, {name}</h2>
+            <button onClick={logout} className="px-3 py-1 bg-red-500 text-white rounded">🚪 Logout</button>
+          </div>
           {tasks.length === 0 ? (
             <p>No tasks assigned to you!</p>
           ) : (
