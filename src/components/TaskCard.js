@@ -13,8 +13,8 @@ const TaskCard = ({ task, onUpdate }) => {
       <p>Status: {task.status}</p>
       <textarea value={notes} onChange={(e) => setNotes(e.target.value)} />
       <div className="flex gap-2 mt-2">
-        <button onClick={handleSave}>💾 Save Notes</button>
-        <button onClick={handleDone}>✅ Mark Done</button>
+        <button onClick={handleSave}> Save Notes</button>
+        <button onClick={handleDone}> Mark Done</button>
       </div>
     </div>
   );

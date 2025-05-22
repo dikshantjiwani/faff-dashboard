@@ -13,7 +13,7 @@ function App() {
       setTasks(data);
       setLoggedIn(true);
     } catch (err) {
-      alert("❌ Could not fetch tasks. Check name or network.");
+      alert(" Could not fetch tasks. Check name or network.");
     }
   };
 
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">📝 Task Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-4"> Task Dashboard</h1>
 
       {!loggedIn ? (
         <div>
