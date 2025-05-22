@@ -30,26 +30,37 @@ function App() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4"> Task Dashboard</h1>
+    <div className="p-6 max-w-3xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6 text-center"> Task Dashboard</h1>
 
       {!loggedIn ? (
-        <div>
+        <div className="text-center">
           <input
             type="text"
             placeholder="Enter your name"
-            className="border px-2 py-1"
+            className="border px-4 py-2 rounded w-64"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <button onClick={login} className="ml-2 px-4 py-1 bg-blue-600 text-white rounded">Login</button>
+          <button
+            onClick={login}
+            className="ml-3 px-4 py-2 bg-blue-600 text-white rounded"
+          >
+            Login
+          </button>
         </div>
       ) : (
         <div>
-          <div className="flex justify-between items-center mb-3">
-            <h2 className="text-xl font-semibold"> Hello, {name}</h2>
-            <button onClick={logout} className="px-3 py-1 bg-red-500 text-white rounded">🚪 Logout</button>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-semibold"> Welcome, {name}</h2>
+            <button
+              onClick={logout}
+              className="px-4 py-2 bg-red-500 text-white rounded"
+            >
+               Logout
+            </button>
           </div>
+
           {tasks.length === 0 ? (
             <p>No tasks assigned to you!</p>
           ) : (
